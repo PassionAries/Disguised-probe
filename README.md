@@ -3,7 +3,7 @@
 
 > **📌 快速指引**
 > - **在线生成 UUID**：访问 [uuidgenerator.net](https://www.uuidgenerator.net/) 生成 **Version 4** 即可，每个探针需唯一 UUID。
-> - **一键拼接请求**：使用 [命令生成器](https://www.keep.nett.to/) 填入参数直接生成上报 URL。 小白福利
+> - **一键拼接请求**：使用 [命令生成器](https://www.keep.ndjp.net/) 填入参数直接生成上报 URL。 小白福利
 > - **国家代码哪里查**：使用[Nations Online](https://www.nationsonline.org/oneworld/country_code_list.htm)。
 
 
@@ -28,17 +28,17 @@
 
 **单探针，无国家伪装**
 ```bash
-https://keep.nett.to/report?server=nezha.com:443&secret=my-secret-key&uuid=agent-uuid-01
+https://keep.ndjp.net/report?server=nezha.com:443&secret=my-secret-key&uuid=agent-uuid-01
 ```
 
 **单探针，指定国家**
 ```bash
-https://keep.nett.to/report?server=nezha.com:443&secret=my-secret-key&uuid=agent-uuid-01&country=AQ
+https://keep.ndjp.net/report?server=nezha.com:443&secret=my-secret-key&uuid=agent-uuid-01&country=AQ
 ```
 
 **多探针，每个探针独立指定国家**
 ```bash
-https://keep.nett.to/report?server=nezha.com:443&secret=my-secret-key&tls=true&uuid=agent-uuid-01:US,agent-uuid-02:AQ,agent-uuid-03:JP
+https://keep.ndjp.net/report?server=nezha.com:443&secret=my-secret-key&tls=true&uuid=agent-uuid-01:US,agent-uuid-02:AQ,agent-uuid-03:JP
 ```
 
 ---
@@ -65,7 +65,7 @@ https://keep.nett.to/report?server=nezha.com:443&secret=my-secret-key&tls=true&u
 - 单个面板地址
 ```bash
 urls=(
-  "https://keep.nett.to/report?server=nezha.com:443&secret=my-secret-key&tls=true&uuid=fb711b0b-7cdf-4493-80a4-0227ec134785:FM,32cf3744-75e9-47f3-9887-421c71463710:DJ,3d33f0dc-5714-4350-b793-3f32e9ff4cba:KZ,cf420725-ed1e-4adb-9036-adf242470915:AR,b9fafd90-9f8e-4512-be1f-710f5ad784e9:UZ,1f6c2bb0-f871-439b-90cc-e6c7fdd27d38:FJ,90cab00a-c85b-4c43-a6c8-4dceb8399bc3:GT,7a62877b-54f2-4954-a8af-dfe817f46086:LC,3ffc595d-196d-4fdd-aef3-64d87641116b:NI,c72009ec-9293-44b8-808e-20e595d9ccec:AQ,d51433ff-6068-46eb-84f0-0ef582ef2cf0:AQ"
+  "https://keep.ndjp.net/report?server=nezha.com:443&secret=my-secret-key&tls=true&uuid=fb711b0b-7cdf-4493-80a4-0227ec134785:FM,32cf3744-75e9-47f3-9887-421c71463710:DJ,3d33f0dc-5714-4350-b793-3f32e9ff4cba:KZ,cf420725-ed1e-4adb-9036-adf242470915:AR,b9fafd90-9f8e-4512-be1f-710f5ad784e9:UZ,1f6c2bb0-f871-439b-90cc-e6c7fdd27d38:FJ,90cab00a-c85b-4c43-a6c8-4dceb8399bc3:GT,7a62877b-54f2-4954-a8af-dfe817f46086:LC,3ffc595d-196d-4fdd-aef3-64d87641116b:NI,c72009ec-9293-44b8-808e-20e595d9ccec:AQ,d51433ff-6068-46eb-84f0-0ef582ef2cf0:AQ"
 )
 
 for url in "${urls[@]}"; do
@@ -81,8 +81,8 @@ wait
 - 两个面板地址（按需增减）
 ```bash
 urls=(
-  "https://keep.nett.to/report?server=面板地址:443&secret=面板KEY&tls=true&uuid=fb711b0b-7cdf-4493-80a4-0227ec134785:FM"
-  "https://keep.nett.to/report?server=面板地址:8008&secret=面板KEY&tls=false&uuid=fb711b0b-7cdf-4493-80a4-0227ec134785:FM"
+  "https://keep.ndjp.net/report?server=面板地址:443&secret=面板KEY&tls=true&uuid=fb711b0b-7cdf-4493-80a4-0227ec134785:FM"
+  "https://keep.ndjp.net/report?server=面板地址:8008&secret=面板KEY&tls=false&uuid=fb711b0b-7cdf-4493-80a4-0227ec134785:FM"
 )
 
 for url in "${urls[@]}"; do
