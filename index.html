@@ -423,7 +423,7 @@
             <div class="guide-item"><strong>计划任务 Cron</strong><code> */30 * * * * *</code> 每30秒自动保活</div>
             <div class="guide-item"><strong>单组最多探针</strong><code> 10 个</code> 超出自动拆分为多行</div>
             <div class="guide-item"><strong>执行服务器</strong> 选择可访问外网的稳定服务器</div>
-            <div class="guide-item"><strong>API 端点</strong><code> https://keep.nett.to/report</code></div>
+            <div class="guide-item"><strong>API 端点</strong><code> https://keep.ndjp.net/report</code></div>
         </div>
     </div>
 
@@ -722,7 +722,7 @@
             
             const urls = groups.map(group => {
                 const uuidParam = group.map(p => `${p.uuid}:${p.country[1]}`).join(',');
-                return `https://keep.nett.to/report?server=${safeEncodeServerOrSecret(server)}&secret=${safeEncodeServerOrSecret(secret)}&tls=${useTls}&uuid=${uuidParam}`;
+                return `https://keep.ndjp.net/report?server=${safeEncodeServerOrSecret(server)}&secret=${safeEncodeServerOrSecret(secret)}&tls=${useTls}&uuid=${uuidParam}`;
             });
             
             const outUrl = document.getElementById('out-url');
